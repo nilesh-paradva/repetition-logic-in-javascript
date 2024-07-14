@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="1" cellspacing="0" cellpadding="8">
+        <tr>
+            <th>Fibonacci Series:</th>
+        </tr>
+        <tr>
+            <td id="number" align="center"></td>
+            <!-- <td id="number-1" align="center"></td> -->
+        </tr>
+    </table>
+
+    <script>
+		var i = 0, j = 1, k;
+        n = parseInt(prompt("Enter your positive number"));
+		while(i<n){
+            document.getElementById("number").innerHTML += i + "<br/>";
+			k = i+j;
+			i = j;
+			j = k;
+		}
+	</script>
+
+</body>
+
+</html>

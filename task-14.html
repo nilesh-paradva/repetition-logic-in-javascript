@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="1" cellspacing="0" cellpadding="8">
+        <tr>
+            <th>pattern</th>
+        </tr>
+        <tr>
+            <td id="pattern"></td>
+        </tr>
+    </table>
+
+
+    <script>
+        let i,j,k=0,box = '';
+
+        for(i=1; i<=5; i++){
+
+            for(j=1; j<=i; j++){
+                k++;
+                box += k;
+
+            }
+
+            box += "</br>";
+
+        }
+        document.getElementById("pattern").innerHTML = box;
+        // console.log(box);
+    </script>
+</body>
+
+</html>
