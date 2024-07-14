@@ -8,23 +8,46 @@
 </head>
 
 <body>
+    <table border="1" cellspacing="0" cellpadding="8">
+        <tr>
+            <th>is a disarium number</th>
+            <th>is not a disarium number</th>
+        </tr>
+        <tr>
+            <td id="number" align="center"></td>
+            <td id="number-1" align="center"></td>
+        </tr>
+    </table>
     <script>
-        let num = 135;
-        let ans = 0;
-        let digits = num.length;
-        let dup_number = num;
 
-        while(dup_number != 0){
-            let remainder = dup_number % 10;
-            ans = ans + remainder**digits;
-            digits = digits - 1; 
-            dup_number = (dup_number/10);
+        let number, num, digitCount, sum, digit;
+        number = parseInt(prompt("Enter your positive number :-"));
+        num = number;
+        digitCount = 0;
+        while (num > 0) {
+
+            num = Math.floor(num / 10);
+            digitCount++;
+
         }
 
-        if(num == ans){
-            console.log(ans, "is disarium number");
-        }else{
-            console.log(ans, "is not disarium number");
+        sum = 0;
+        num = number;
+        while (num > 0) {
+
+            digit = num % 10;
+            sum += Math.pow(digit, digitCount); // power value ex:- 2 ki power 3 value = 2*2*2 = 8;
+            num = Math.floor(num / 10); //smallest value count ex:- 1.2  = 1; 2.8 = 2; -1.4 = -2;
+            digitCount--;
+
+        }
+
+        if (sum == number) {
+            // console.log(number, "disarium number");
+            document.getElementById("number").innerHTML = number;
+        } else {
+            // console.log(number, "not disarium number");
+            document.getElementById("number-1").innerHTML = number;
         }
     </script>
 </body>
