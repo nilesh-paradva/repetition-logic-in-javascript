@@ -8,7 +8,25 @@
 </head>
 
 <body>
-    
+    <script>
+        let num = 135;
+        let ans = 0;
+        let digits = num.length;
+        let dup_number = num;
+
+        while(dup_number != 0){
+            let remainder = dup_number % 10;
+            ans = ans + remainder**digits;
+            digits = digits - 1; 
+            dup_number = (dup_number/10);
+        }
+
+        if(num == ans){
+            console.log(ans, "is disarium number");
+        }else{
+            console.log(ans, "is not disarium number");
+        }
+    </script>
 </body>
 
 </html>
